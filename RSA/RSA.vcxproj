@@ -64,11 +64,15 @@
   <ItemGroup>
     <ClCompile Include="LongInt.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="md5.cpp" />
     <ClCompile Include="RSA.cpp" />
+    <ClCompile Include="sha1.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="md5.h" />
     <ClInclude Include="RSA.h" />
     <ClInclude Include="LongInt.h" />
+    <ClInclude Include="sha1.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

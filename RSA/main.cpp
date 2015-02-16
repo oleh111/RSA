@@ -3,6 +3,8 @@
 #include <cmath>
 #include "RSA.h"
 #include <fstream>
+#include "md5.h"
+#include "sha1.h"
 using namespace std;
 
 int rando(int min, int max)
@@ -17,85 +19,18 @@ int rando(int min, int max)
 	return min + rand() % (max - min);
 }
 
-string Encryption(string str)
-{
-    string encRes = "";
-	vector<int> enc;
-	enc.clear();
-	for (unsigned int i(0); i < str.length(); i++)
-		enc.push_back(str[i]);
-
-	encRes += to_string(enc[0]);
-	for (int i = 1; i < enc.size(); i++)
-	{
-		if (str[i]<10)
-		{
-			encRes += "00" + to_string(enc[i]);
-			continue;
-		}
-		if (str[i]<100)
-		{
-			encRes += "0" + to_string(enc[i]);
-			continue;
-		}
-		encRes += to_string(enc[i]);
-	}
-
-    return encRes;
-}
-
-string Decryption(string str)
-{
-    string dec("");
-	string::iterator it=str.end();
-	it--;
-	for ( it; it!=str.begin();)
-	{
-		int dec_ = 0;
-		for (int i = 0; i < 3; i++)
-		{
-			dec_ += (*it - '0') * pow(10, i);
-			if (it == str.begin())
-			{
-				break;
-			}
-			--it;
-		}
-		dec.insert(dec.begin(), dec_);
-	}
-    return dec;
-}
-
 
 int main()
 {
-	/*LongInt q=LongInt(), w=LongInt(), e=LongInt();
-	q.MakeRand(true, 19);
-	w.MakeRand(true, 15);
-
-	LongInt res = PowModInt(q, 2, w);
-	cout<<res.ToString();*/
-	LongInt a, b;
-	a.FromText("4567890123");
-	b.FromText("6789");
-	//LongInt res = a / b;
-
-	string s = "47148020709668928081798782506800190542277458516063296228784219589366839027587";
+	string str = "qwertyuiop[]asdfghjkl;'zxcvbnm,./QWERTYUIOP{}ASDFGHJKL:ZXCVBNM<>?1234567890-=";
 	
-	int i=123456798;
-	string str = "qwertyuiop[]asdfghjkl;'zxcvbnm,./ 1234567890-= QWERTYUIOP{}ASDFGHJKL:ZXCVBNM<>?";
-	
-    //string encrypted = Encryption(str); // storing the encrypted string
-    //string decrypted = Decryption(encrypted); // storing the decrypted string
-
-	//cout << encrypted << endl;
-	//cout << decrypted << endl;
-
+	cout<<md5(str)<<endl;
+	cout<<sha1(str)<<endl;
 
 	//RSA rsa = RSA(32);
 	//while(true)
 	//{
-	RSA rsa = RSA(64);
+	RSA rsa = RSA(32);
 	string n, prk, pbk;
 	n = rsa.n.ToString();
 	prk = rsa.d.ToString();

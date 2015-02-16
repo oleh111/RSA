@@ -104,9 +104,29 @@ string RSA::Encrypt(string text, bool isNumber)
 	}
 	else
 	{
-		txt.FromText(Encryption(text));
+		txt.FromText( Encryption(text));
 	}
-	
+
+	//якщо текст довший за ключ тоді розбиваємо текст на блоки довжиною рівною довжині ключа
+	/*LongInt result;
+	if (txt >= n)
+	{
+		string res = "", temp;
+		for (int i = 0; i < txt.GetNumbDig() / (n.GetNumbDig() - 1); i++)
+		{
+			res += temp.assign(txt.ToString(), (n.GetNumbDig() - 1)*i, n.GetNumbDig() - 1);
+		}
+		if (txt.GetNumbDig() % (n.GetNumbDig() - 1) > 0)
+		{
+			res += temp.assign(txt.ToString(), (txt.GetNumbDig() - 1) - (txt.GetNumbDig() % (n.GetNumbDig() - 1)), (txt.GetNumbDig() % (n.GetNumbDig() - 1)));
+		}
+		result.FromText(res);
+	}
+	else
+	{
+		result = PowMod(txt, e, n);
+	}*/
+
 	txt = PowMod(txt, e, n);
 
 	return txt.ToString();
