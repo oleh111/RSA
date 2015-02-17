@@ -1,5 +1,7 @@
 #include <string>
 #include "RSA.h"
+#include "md5.h"
+#include "sha1.h"
 
 RSA::RSA()
 {

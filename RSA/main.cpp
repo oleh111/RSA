@@ -22,26 +22,30 @@ int rando(int min, int max)
 
 int main()
 {
-	string str = "qwertyuiop[]asdfghjkl;'zxcvbnm,./QWERTYUIOP{}ASDFGHJKL:ZXCVBNM<>?1234567890-=";
-	
-	cout<<md5(str)<<endl;
-	cout<<sha1(str)<<endl;
+	string str = "qwertyuiop asdfghjkl 1234567890";
+
+	cout<<"text = "<<str<<endl;
+	cout<<"md5 hash = "<<md5(str)<<endl;
+	cout<<"sha1 hash = "<<sha1(str)<<endl;
 
 
 
 	//RSA rsa = RSA(32);
 	//while(true)
 	//{
-	RSA rsa = RSA(32);
+	RSA rsa = RSA(64);
 	string n, prk, pbk;
 	n = rsa.n.ToString();
 	prk = rsa.d.ToString();
 	pbk = rsa.e.ToString();
-	cout<<n<<" "<<pbk<<" "<<prk<<endl;
+	cout<<"public key"<<endl;
+	cout<<"n="<<n<<" "<<"e="<<pbk<<endl<<"private key"<<endl<<"d="<<prk<<endl;
 	//}
-	string sign = rsa.RSASignature(str, "sha1");
-	cout<<sign<<endl;
-	cout<<rsa.RSASignatureVerification(sign, str, "sha1")<<endl;
+	string sign = rsa.RSASignature(str, "md5");
+	cout<<"RSA signature using md5 "<<sign<<endl;
+	sign = rsa.RSASignature(str, "sha1");
+	cout<<"RSA signature using sha1 "<<sign<<endl;
+	//cout<<rsa.RSASignatureVerification(sign, str, "md5")<<endl;
 
 	string ans = "n";
 	do
@@ -58,95 +62,5 @@ int main()
 	}
 	while(ans == "y");
 
-	//LongInt num = LongInt(182239);
-	//while(true)
-	//{
-	//	/*num.MakeRand(true, 6);
-	//	num.SetPoz();*/
-
-	//	//генерує прості числа довжиною до 10
-	//	num.GenSimpleNumb(9);
-
-	//	str = num.ToString();
-	//	cout<<str<<endl;
-	//	//cout<<num.TestRabinMiller(num, 200)<<endl;
-	//	system("pause");
-	//}
-	//
-	//num.GenSimpleNumb(10);
-	//str = num.ToString();
-	//cout<<str<<endl;
-	//cin>>i;
-
-	//int x, y, n;
-	//i=1;
-	//while(true)
-	//{
-	//	x = rando(100000, 999999);//123624;//
-	//	y = rando(10000, 99999);//25049;//
-	//	n = rando(100000, 999999);//109253;//
-	//	LongInt a(x);
-	//	//a.FromText("212332312233341999");
-	//	LongInt b(y);
-	//	//b.FromText("278888400");
-	//	LongInt N(n);
-	//	LongInt c;
-	//	LongInt d;
-
-	//	cout<<i<<endl;
-	//	cout<<x<<"  "<<y<<"  "<<n<<endl;//" "<<x/y<<" "<<x%y<<endl;
-	//	/*str = a.ToString();
-	//	for(int i=0;i<3;i++)
-	//	{
-	//		cout<<str[i];
-	//	}
-	//	c = a * b;
-	//	if(c != (x*y))
-	//	{
-	//		cout<<"error *";
-	//		break;
-	//	}
-	//	c = a - b;
-	//	if(c != (x-y))
-	//	{
-	//		cout<<"error -";
-	//		break;
-	//	}
-	//	c = a + b;
-	//	if(c != (x+y))
-	//	{
-	//		cout<<"error +";
-	//		break;
-	//	}*/
-	//	//d = a % b;
-	//	//str = d.ToString();
-	//	//if(d != (int)(x%y))
-	//	//{
-	//	//	cout<<"error /d "<<str;
-	//	//	//break;
-	//	//}
-	//	//c = a / b;
-	//	//str = c.ToString();
-	//	//if(c != (x/y))
-	//	//{
-	//	//	cout<<"error /c "<<str;
-	//	//	break;
-	//	//}
-	//	//c = a / i;
-	//	//if (c != (x/i))
-	//	//{
-	//	//	cout<<"error / int"<<i<<endl;
-	//	//	break;
-	//	//}
-	//	c = PowMod(a, b, N);
-	//	cout<<c.ToString();
-	//	
-	//	i++;
-	//	//system("pause");
-	//	//cin>>i;
-	//}
-
-
-	//cin>>i;
 	return 0;
 }

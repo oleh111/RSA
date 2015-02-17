@@ -2,8 +2,6 @@
 
 #include <string>
 #include "LongInt.h"
-#include "md5.h"
-#include "sha1.h"
 using namespace std;
 
 class RSA
