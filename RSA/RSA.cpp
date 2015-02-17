@@ -108,28 +108,35 @@ string RSA::Encrypt(string text, bool isNumber)
 	}
 
 	//якщо текст довший за ключ тоді розбиваємо текст на блоки довжиною рівною довжині ключа
-	/*LongInt result;
-	if (txt >= n)
+	LongInt result;
+	string res = "", temp = "", textNumber = txt.ToString();
+	string::iterator it = textNumber.end()-1;
+	do
 	{
-		string res = "", temp;
-		for (int i = 0; i < txt.GetNumbDig() / (n.GetNumbDig() - 1); i++)
+		int size = (n.GetNumbDig()/3)*3;
+		for (int i = 0; i < size && it != textNumber.begin(); i++)
 		{
-			res += temp.assign(txt.ToString(), (n.GetNumbDig() - 1)*i, n.GetNumbDig() - 1);
+			temp.insert(temp.begin(), *it);
+			--it;
+			if (it == textNumber.begin())
+			{
+				temp.insert(temp.begin(), *it);
+			}
 		}
-		if (txt.GetNumbDig() % (n.GetNumbDig() - 1) > 0)
+		LongInt a;
+		a.FromText(temp);
+		temp = PowMod(a, e, n).ToString();
+		if (temp.length() < n.GetNumbDig())
 		{
-			res += temp.assign(txt.ToString(), (txt.GetNumbDig() - 1) - (txt.GetNumbDig() % (n.GetNumbDig() - 1)), (txt.GetNumbDig() % (n.GetNumbDig() - 1)));
+			temp.insert(temp.begin(), n.GetNumbDig()-temp.length() , '0');
 		}
-		result.FromText(res);
+		res += temp;
+		temp = "";
 	}
-	else
-	{
-		result = PowMod(txt, e, n);
-	}*/
-
-	txt = PowMod(txt, e, n);
-
-	return txt.ToString();
+	while (it != textNumber.begin());
+	result.FromText(res);
+	result.DelNull();
+	return result.ToString();
 }
 
 string RSA::Decrypt(string text, bool isNumber)
@@ -137,15 +144,36 @@ string RSA::Decrypt(string text, bool isNumber)
 	LongInt txt;
 	txt.FromText(text);
 
-	txt = PowMod(txt, d, n);
-	if (isNumber)
+	LongInt result;
+	string res = "", temp = "", textNumber = txt.ToString();
+	string::iterator it = textNumber.end()-1;
+	do
 	{
-		return txt.ToString();
+		int size = (n.GetNumbDig()/3)*3;
+		for (int i = 0; i < n.GetNumbDig() && it != textNumber.begin(); i++)
+		{
+			temp.insert(temp.begin(), *it);
+			--it;
+			if (it == textNumber.begin())
+			{
+				temp.insert(temp.begin(), *it);
+			}
+		}
+		LongInt a;
+		a.FromText(temp);
+		a.DelNull();
+		temp = PowMod(a, d, n).ToString();
+		if (temp.length() < size && temp.length() > size-3)
+		{
+			temp.insert(temp.begin(), size-temp.length() , '0');
+		}
+		res += temp;
+		temp = "";
 	}
-	else
-	{
-		return Decryption( txt.ToString());
-	}
+	while (it != textNumber.begin());
+	result.FromText(res);
+
+	return Decryption(result.ToString());
 }
 
 string RSA::Encryption(string str)
@@ -195,4 +223,46 @@ string RSA::Decryption(string str)
 		dec.insert(dec.begin(), dec_);
 	}
     return dec;
+}
+
+string RSA::RSASignature(string text, string hash)
+{
+	string res = "";
+	if (hash == "md5")
+	{
+		res = md5(text);
+	}
+	if (hash == "sha1")
+	{
+		res = sha1(text);
+	}
+
+	LongInt result, txt;
+	txt.FromText(Encryption(res));
+	result = PowMod(txt, d, n);
+
+	return result.ToString();
+}
+
+bool RSA::RSASignatureVerification(string sign, string text, string hash)
+{
+	string res = "";
+	if (hash == "md5")
+	{
+		res = md5(text);
+	}
+	if (hash == "sha1")
+	{
+		res = sha1(text);
+	}
+
+	LongInt devRes, txt;
+	txt.FromText(Encryption(res));
+	devRes = PowMod(txt, LongInt(1), n);
+
+	LongInt devRes2, signature;
+	signature.FromText(sign);
+	devRes2 = PowMod(signature, e, n);
+	
+	return (devRes == devRes2)?true:false;
 }

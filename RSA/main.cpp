@@ -27,6 +27,8 @@ int main()
 	cout<<md5(str)<<endl;
 	cout<<sha1(str)<<endl;
 
+
+
 	//RSA rsa = RSA(32);
 	//while(true)
 	//{
@@ -37,6 +39,9 @@ int main()
 	pbk = rsa.e.ToString();
 	cout<<n<<" "<<pbk<<" "<<prk<<endl;
 	//}
+	string sign = rsa.RSASignature(str, "sha1");
+	cout<<sign<<endl;
+	cout<<rsa.RSASignatureVerification(sign, str, "sha1")<<endl;
 
 	string ans = "n";
 	do

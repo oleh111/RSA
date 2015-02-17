@@ -2,6 +2,8 @@
 
 #include <string>
 #include "LongInt.h"
+#include "md5.h"
+#include "sha1.h"
 using namespace std;
 
 class RSA
@@ -28,6 +30,10 @@ public:
 	//функції переведення тексту в число
 	string Encryption(string str);
 	string Decryption(string str);
+	//функція генерує підпис RSA для тексту text і з допомогою функції хешування hash
+	string RSASignature(string text, string hash);
+	//верифікація підпису RSA
+	bool RSASignatureVerification(string sign, string text, string hash);
 
 private:
 	//генерує d
