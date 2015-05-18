@@ -69,3 +69,43 @@ extern "C" __declspec(dllexport) void Decrypt()
 	myfile << rsa.Decrypt(text, 0) + "\n";
 	myfile.close();
 }
+
+extern "C" __declspec(dllexport) string MD5Hash(string text)
+{
+	return md5(text);
+}
+
+extern "C" __declspec(dllexport) string SHA1Hash(string text)
+{
+	return sha1(text);
+}
+
+extern "C" __declspec(dllexport) string RSASignature(string text, string hash)
+{
+	string n, e, d;
+	ifstream myFile;
+	myFile.open("keys.txt");
+	while (!myFile.eof())
+	{
+		myFile >> n >> e >> d;
+	}
+	myFile.close();
+
+	RSA rsa = RSA(n, e, d);
+	return rsa.RSASignature(text, hash);
+}
+
+extern "C" __declspec(dllexport) bool RSASignatureVerification(string sign, string text, string hash)
+{
+	string n, e, d;
+	ifstream myFile;
+	myFile.open("keys.txt");
+	while (!myFile.eof())
+	{
+		myFile >> n >> e >> d;
+	}
+	myFile.close();
+
+	RSA rsa = RSA(n, e, d);
+	return rsa.RSASignatureVerification(sign, text, hash);
+}

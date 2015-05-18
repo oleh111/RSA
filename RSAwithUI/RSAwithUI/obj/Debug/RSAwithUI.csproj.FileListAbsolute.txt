@@ -1,0 +1,9 @@
+C:\Users\Oleh\Documents\Projects\VS2012\RSAwithUI\RSAwithUI\bin\Debug\RSAwithUI.exe.config
+C:\Users\Oleh\Documents\Projects\VS2012\RSAwithUI\RSAwithUI\bin\Debug\RSAwithUI.exe
+C:\Users\Oleh\Documents\Projects\VS2012\RSAwithUI\RSAwithUI\bin\Debug\RSAwithUI.pdb
+C:\Users\Oleh\Documents\Projects\VS2012\RSAwithUI\RSAwithUI\obj\Debug\RSAwithUI.csprojResolveAssemblyReference.cache
+C:\Users\Oleh\Documents\Projects\VS2012\RSAwithUI\RSAwithUI\obj\Debug\RSAwithUI.Form1.resources
+C:\Users\Oleh\Documents\Projects\VS2012\RSAwithUI\RSAwithUI\obj\Debug\RSAwithUI.Properties.Resources.resources
+C:\Users\Oleh\Documents\Projects\VS2012\RSAwithUI\RSAwithUI\obj\Debug\RSAwithUI.csproj.GenerateResource.Cache
+C:\Users\Oleh\Documents\Projects\VS2012\RSAwithUI\RSAwithUI\obj\Debug\RSAwithUI.exe
+C:\Users\Oleh\Documents\Projects\VS2012\RSAwithUI\RSAwithUI\obj\Debug\RSAwithUI.pdb

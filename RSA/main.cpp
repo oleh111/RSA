@@ -33,7 +33,7 @@ int main()
 	//RSA rsa = RSA(32);
 	//while(true)
 	//{
-	RSA rsa = RSA(64);
+	RSA rsa = RSA(32);
 	string n, prk, pbk;
 	n = rsa.n.ToString();
 	prk = rsa.d.ToString();

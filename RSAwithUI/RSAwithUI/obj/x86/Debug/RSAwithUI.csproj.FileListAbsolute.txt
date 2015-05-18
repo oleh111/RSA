@@ -1,0 +1,45 @@
+C:\Users\Oleh\Documents\Projects\VS2012\RSAwithUI\RSAwithUI\bin\x86\Debug\RSAwithUI.exe.config
+C:\Users\Oleh\Documents\Projects\VS2012\RSAwithUI\RSAwithUI\bin\x86\Debug\RSAwithUI.exe
+C:\Users\Oleh\Documents\Projects\VS2012\RSAwithUI\RSAwithUI\bin\x86\Debug\RSAwithUI.pdb
+C:\Users\Oleh\Documents\Projects\VS2012\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.Form1.resources
+C:\Users\Oleh\Documents\Projects\VS2012\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.Properties.Resources.resources
+C:\Users\Oleh\Documents\Projects\VS2012\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.csproj.GenerateResource.Cache
+C:\Users\Oleh\Documents\Projects\VS2012\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.exe
+C:\Users\Oleh\Documents\Projects\VS2012\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.pdb
+C:\Users\Oleh\Documents\Projects\VS2012\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.csprojResolveAssemblyReference.cache
+C:\Users\Oleh\Desktop\RSAwithUI\RSAwithUI\bin\x86\Debug\RSAwithUI.exe.config
+C:\Users\Oleh\Desktop\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.exe
+C:\Users\Oleh\Desktop\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.pdb
+C:\Users\Oleh\Desktop\RSAwithUI\RSAwithUI\bin\x86\Debug\RSAwithUI.exe
+C:\Users\Oleh\Desktop\RSAwithUI\RSAwithUI\bin\x86\Debug\RSAwithUI.pdb
+C:\Users\Oleh\Desktop\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.csprojResolveAssemblyReference.cache
+C:\Users\Oleh\Desktop\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.Form1.resources
+C:\Users\Oleh\Desktop\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.Properties.Resources.resources
+C:\Users\Oleh\Desktop\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.csproj.GenerateResource.Cache
+D:\Нова папка\RSAwithUI\RSAwithUI\bin\x86\Debug\RSAwithUI.exe.config
+D:\Нова папка\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.exe
+D:\Нова папка\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.pdb
+D:\Нова папка\RSAwithUI\RSAwithUI\bin\x86\Debug\RSAwithUI.exe
+D:\Нова папка\RSAwithUI\RSAwithUI\bin\x86\Debug\RSAwithUI.pdb
+D:\Нова папка\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.Form1.resources
+D:\Нова папка\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.Properties.Resources.resources
+D:\Нова папка\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.csproj.GenerateResource.Cache
+D:\Нова папка\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.csprojResolveAssemblyReference.cache
+D:\Навчання\курсова\Курсова проги\RSAwithUI\RSAwithUI\bin\x86\Debug\RSAwithUI.exe.config
+D:\Навчання\курсова\Курсова проги\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.exe
+D:\Навчання\курсова\Курсова проги\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.pdb
+D:\Навчання\курсова\Курсова проги\RSAwithUI\RSAwithUI\bin\x86\Debug\RSAwithUI.exe
+D:\Навчання\курсова\Курсова проги\RSAwithUI\RSAwithUI\bin\x86\Debug\RSAwithUI.pdb
+D:\Навчання\курсова\Курсова проги\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.csprojResolveAssemblyReference.cache
+D:\Навчання\курсова\Курсова проги\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.Form1.resources
+D:\Навчання\курсова\Курсова проги\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.Properties.Resources.resources
+D:\Навчання\курсова\Курсова проги\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.csproj.GenerateResource.Cache
+C:\Users\oleh\Documents\GitHub\RSA\RSAwithUI\RSAwithUI\bin\x86\Debug\RSAwithUI.exe.config
+C:\Users\oleh\Documents\GitHub\RSA\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.exe
+C:\Users\oleh\Documents\GitHub\RSA\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.pdb
+C:\Users\oleh\Documents\GitHub\RSA\RSAwithUI\RSAwithUI\bin\x86\Debug\RSAwithUI.exe
+C:\Users\oleh\Documents\GitHub\RSA\RSAwithUI\RSAwithUI\bin\x86\Debug\RSAwithUI.pdb
+C:\Users\oleh\Documents\GitHub\RSA\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.Form1.resources
+C:\Users\oleh\Documents\GitHub\RSA\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.Properties.Resources.resources
+C:\Users\oleh\Documents\GitHub\RSA\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.csproj.GenerateResource.Cache
+C:\Users\oleh\Documents\GitHub\RSA\RSAwithUI\RSAwithUI\obj\x86\Debug\RSAwithUI.csprojResolveAssemblyReference.cache

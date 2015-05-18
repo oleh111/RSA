@@ -1,27 +1,45 @@
-﻿Build started 18.02.2015 0:00:18.
-     1>Project "C:\Users\Oleh\Documents\GitHub\RSA\RSA\RSA.vcxproj" on node 2 (Build target(s)).
+﻿Build started 18.05.2015 16:03:35.
+     1>Project "C:\Users\oleh\Documents\GitHub\RSA\RSA\RSA.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt RSA.cpp main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt LongInt.cpp main.cpp md5.cpp RSA.cpp sha1.cpp
+         sha1.cpp
+     1>c:\users\oleh\documents\github\rsa\rsa\sha1.cpp(56): warning C4309: 'argument' : truncation of constant value
+     1>c:\users\oleh\documents\github\rsa\rsa\sha1.cpp(76): warning C4244: '=' : conversion from 'SHA1::uint64' to 'SHA1::uint32', possible loss of data
+     1>c:\users\oleh\documents\github\rsa\rsa\sha1.cpp(244): warning C4244: 'argument' : conversion from 'std::streamsize' to 'unsigned int', possible loss of data
          RSA.cpp
      1>c:\users\oleh\documents\github\rsa\rsa\rsa.cpp(131): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\oleh\documents\github\rsa\rsa\rsa.cpp(168): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\oleh\documents\github\rsa\rsa\rsa.cpp(168): warning C4018: '>' : signed/unsigned mismatch
      1>c:\users\oleh\documents\github\rsa\rsa\rsa.cpp(190): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\oleh\documents\github\rsa\rsa\rsa.cpp(218): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-         Generating Code...
-         Compiling...
+         md5.cpp
+     1>c:\users\oleh\documents\github\rsa\rsa\md5.cpp(307): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
          main.cpp
      1>c:\users\oleh\documents\github\rsa\rsa\main.cpp(16): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+         LongInt.cpp
+     1>c:\users\oleh\documents\github\rsa\rsa\longint.cpp(90): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\users\oleh\documents\github\rsa\rsa\longint.cpp(332): warning C4172: returning address of local variable or temporary
+     1>c:\users\oleh\documents\github\rsa\rsa\longint.cpp(501): warning C4172: returning address of local variable or temporary
+     1>c:\users\oleh\documents\github\rsa\rsa\longint.cpp(506): warning C4172: returning address of local variable or temporary
+     1>c:\users\oleh\documents\github\rsa\rsa\longint.cpp(692): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\oleh\documents\github\rsa\rsa\longint.cpp(845): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\oleh\documents\github\rsa\rsa\longint.cpp(955): warning C4018: '>=' : signed/unsigned mismatch
+     1>c:\users\oleh\documents\github\rsa\rsa\longint.cpp(963): warning C4018: '>=' : signed/unsigned mismatch
+     1>c:\users\oleh\documents\github\rsa\rsa\longint.cpp(979): warning C4018: '>=' : signed/unsigned mismatch
+     1>c:\users\oleh\documents\github\rsa\rsa\longint.cpp(1065): warning C4018: '<' : signed/unsigned mismatch
          Generating Code...
+     1>c:\users\oleh\documents\github\rsa\rsa\longint.cpp(414): warning C4715: 'LongInt::operator>' : not all control paths return a value
+     1>c:\users\oleh\documents\github\rsa\rsa\md5.cpp(318): warning C4717: 'operator<<' : recursive on all control paths, function will cause runtime stack overflow
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Oleh\Documents\GitHub\RSA\Debug\RSA.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Oleh\Documents\GitHub\RSA\Debug\RSA.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Oleh\Documents\GitHub\RSA\Debug\RSA.lib" /MACHINE:X86 Debug\LongInt.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\oleh\Documents\GitHub\RSA\Debug\RSA.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\oleh\Documents\GitHub\RSA\Debug\RSA.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\oleh\Documents\GitHub\RSA\Debug\RSA.lib" /MACHINE:X86 Debug\LongInt.obj
          Debug\main.obj
          Debug\md5.obj
          Debug\RSA.obj
          Debug\sha1.obj
-         RSA.vcxproj -> C:\Users\Oleh\Documents\GitHub\RSA\Debug\RSA.exe
-     1>Done Building Project "C:\Users\Oleh\Documents\GitHub\RSA\RSA\RSA.vcxproj" (Build target(s)).
+         RSA.vcxproj -> C:\Users\oleh\Documents\GitHub\RSA\Debug\RSA.exe
+     1>Done Building Project "C:\Users\oleh\Documents\GitHub\RSA\RSA\RSA.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.09
+Time Elapsed 00:00:05.72
