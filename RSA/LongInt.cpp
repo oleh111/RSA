@@ -1,4 +1,4 @@
-#include "LongInt.h"
+п»ї#include "LongInt.h"
 #include <time.h>
 
 LongInt::LongInt()
@@ -165,10 +165,10 @@ void LongInt::GenSimpleNumb(unsigned int Count)
 	do
 	{
 		BOOL = false;
-		this->MakeRand(true, Count); // генерування наступного випадк.числа 
+		this->MakeRand(true, Count); // ГЈГҐГ­ГҐГ°ГіГўГ Г­Г­Гї Г­Г Г±ГІГіГЇГ­Г®ГЈГ® ГўГЁГЇГ Г¤ГЄ.Г·ГЁГ±Г«Г  
 		this->digits[this->GetNumbDig()-1] = 1;
 		this->SetPoz();
-		for (int i=0; i<303 && *this > simpleNumb[i]; i+=1) //перевірка діленням на прості числа
+		for (int i=0; i<303 && *this > simpleNumb[i]; i+=1) //ГЇГҐГ°ГҐГўВіГ°ГЄГ  Г¤ВіГ«ГҐГ­Г­ГїГ¬ Г­Г  ГЇГ°Г®Г±ГІВі Г·ГЁГ±Г«Г 
 		{
 			this->DivInt(simpleNumb[i], LongInt(), r);
 			if (r == 0) 
@@ -181,7 +181,7 @@ void LongInt::GenSimpleNumb(unsigned int Count)
 		{
 			continue;
 		}
-		BOOL = TestRabinMiller(*this, t); //тест на простоту числа
+		BOOL = TestRabinMiller(*this, t); //ГІГҐГ±ГІ Г­Г  ГЇГ°Г®Г±ГІГ®ГІГі Г·ГЁГ±Г«Г 
 		BOOL = !BOOL;
 	}
 	while(BOOL);
@@ -695,7 +695,7 @@ void LongInt::Div(LongInt devisor, LongInt& quotient, LongInt& remainder)
 		return;
 	}
 	// u/v
-	//основа b
+	//Г®Г±Г­Г®ГўГ  b
 	int b = 10;
 	int d = (int)b / (devisor.digits[devisor.GetNumbDig() - 1] + 1);
 	int n = devisor.GetNumbDig();
@@ -751,7 +751,7 @@ void LongInt::Div(LongInt devisor, LongInt& quotient, LongInt& remainder)
 		{
 			negResOfSub = true;
 
-			//має бути b^(n+1) оскільки b=10 то 10^(n+1)
+			//Г¬Г Вє ГЎГіГІГЁ b^(n+1) Г®Г±ГЄВіГ«ГјГЄГЁ b=10 ГІГ® 10^(n+1)
 			_power = "1";
 			for (int i = 0; i < n+1; i++)
 			{
@@ -865,7 +865,7 @@ LongInt Mul(LongInt a, LongInt b)
 			arr.push_back(0);
 		}
 		int j=0, k=0, i=0;
-		//основа b
+		//Г®Г±Г­Г®ГўГ  b
 		int x = 10;
 
 		while(true)
@@ -948,7 +948,7 @@ LongInt Add(LongInt a, LongInt b)
 		vector<unsigned int> arr;
 		arr.clear();
 		int k=0, i=0;
-		//основа b
+		//Г®Г±Г­Г®ГўГ  b
 		int x = 10;
 
 		arr.push_back((a.digits[i] + b.digits[i] + k) % x);
@@ -1036,7 +1036,7 @@ LongInt Sub(LongInt a, LongInt b)
 				arr.push_back(0);
 			}
 			int i=0, k=0;
-			//основа b
+			//Г®Г±Г­Г®ГўГ  b
 			int x = 10;
 
 			arr[i] = (a.digits[i] - b.digits[i] + k + x) % x;

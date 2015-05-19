@@ -4,6 +4,8 @@
 #include <vector>
 using namespace std;
 
+
+
 class LongInt
 {
 	//ОПИС ТИПІВ ТА ДРУЖНІХ ЕЛЕМЕНТІВ
@@ -40,24 +42,10 @@ public:
 	string ToString();
 	//
 	void FromText(string text);
-	////заповнити стандартним числом е (для тестування)
-	//void MakeE();
-	////заповнити стандартним числом q (для тестування)
-	//void MakeQ();
-	////заповнити стандартним числом p (для тестування)
-	//void MakeP();
-	////знайти обернене за модулем
-	//LongInt Reverse(LongInt& mod);
+	
 	//обнулити
 	void MakeNull();
-	////заповнити з рядка бінарного представлення
-	//void FromBinaryString(string str);
-	////заповнити з рядка, вказавши основу представлення
-	//void FromString(string str, SIntBase base);
-	////заповнити з буфера
-	//void FromBuffer(const char* buff, unsigned buffLength);
-	////заповнити буфер
-	//unsigned int ToBuffer(char* buff);
+
 	//ділення (devisor - дільник, quotient - частка, remainder - залишок)
 	void Div(LongInt devisor, LongInt& quotient, LongInt& remainder);
 	//видаляє нулі перед числом

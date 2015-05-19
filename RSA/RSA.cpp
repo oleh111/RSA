@@ -1,4 +1,4 @@
-#include <string>
+п»ї#include <string>
 #include "RSA.h"
 #include "md5.h"
 #include "sha1.h"
@@ -109,7 +109,7 @@ string RSA::Encrypt(string text, bool isNumber)
 		txt.FromText( Encryption(text));
 	}
 
-	//якщо текст довший за ключ тоді розбиваємо текст на блоки довжиною рівною довжині ключа
+	//ГїГЄГ№Г® ГІГҐГЄГ±ГІ Г¤Г®ГўГёГЁГ© Г§Г  ГЄГ«ГѕГ· ГІГ®Г¤Ві Г°Г®Г§ГЎГЁГўГ ВєГ¬Г® ГІГҐГЄГ±ГІ Г­Г  ГЎГ«Г®ГЄГЁ Г¤Г®ГўГ¦ГЁГ­Г®Гѕ Г°ВіГўГ­Г®Гѕ Г¤Г®ГўГ¦ГЁГ­Ві ГЄГ«ГѕГ·Г 
 	LongInt result;
 	string res = "", temp = "", textNumber = txt.ToString();
 	string::iterator it = textNumber.end()-1;
